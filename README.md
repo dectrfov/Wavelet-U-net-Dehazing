@@ -1,7 +1,7 @@
 # Wavelet U-net Dehazing
 WAVELET U-NET AND THE CHROMATIC ADAPTATION TRANSFORM FOR SINGLE IMAGE DEHAZING - ICIP 2019
 
-This repository shows implementation of [Wavelet U-net](https://ieeexplore.ieee.org/document/8803391). This work establishes the new network combining wavelet transrom for single image dehazing. We use [RESIDE](https://sites.google.com/view/reside-dehaze-datasets/reside-v0)dataset for evaluation, and it outperforms the state-of-art algorithms.
+This repository shows implementation of [Wavelet U-net for image dehazing](https://ieeexplore.ieee.org/document/8803391). This work establishes the new network combining wavelet transrom for single image dehazing. We use [RESIDE](https://sites.google.com/view/reside-dehaze-datasets/reside-v0)dataset for evaluation, and it outperforms the state-of-art algorithms.
 
 <p align="center"><img width="100%" src="figures/result_an.png" /></p>
 
@@ -57,6 +57,25 @@ $ CUDA_VISIBLE_DEVICES=0 python train.py --epochs 100 \
 ### 4. Testing
 
 To test dehazing on RESIDE:
+
+```bash
+$ python demo.py  --sample_output_folder samples/ \
+                --use_gpu true \
+                --gpu 0 \
+                --model_dir model/ \
+                --ckpt dehaze_chromatic_100.pkl
+```
+<br/>
+
+## Using pre-trained model for evaluation
+
+### 1. Download [model](https://drive.google.com/open?id=1t_6NvDa5O2y6_QIjs1C4ox2wA7iWrZPo)
+Download from googledrive and put it in the model folder
+
+### 2. Place haze images
+Place hazy images in the samples folder
+
+### 3. Run following command
 
 ```bash
 $ python demo.py  --sample_output_folder samples/ \
