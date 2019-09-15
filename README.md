@@ -10,7 +10,6 @@ This repository shows implementation of [Wavelet U-net for image dehazing](https
 [Hao-Hsiang Yang](https://www.linkedin.com/in/%E7%9A%93%E7%BF%94-%E6%A5%8A-155440164/)<sup> 1,2</sup>, [Yanwei Fu](https://yanweifu.github.io/)<sup> 2</sup> <br/>
 <sup>1 </sup>Graduate Institute of Electrical Engineering, National Taiwan University, Taipei, Taiwan, <sup>2 </sup>School of Data Science, Fudan University, Shanghai, China<br/>
  IEEE International Conference on Image Processing ([ICIP](http://2019.ieeeicip.org/)), 2019 
-
 <br/>
 
 ## Dependencies
@@ -19,8 +18,6 @@ This repository shows implementation of [Wavelet U-net for image dehazing](https
 * [PyWt](https://pypi.org/project/PyWt/)
 
 <br/>
-
-
 ## Usage
 
 ### 1. Cloning the repository
@@ -53,7 +50,6 @@ $ CUDA_VISIBLE_DEVICES=0 python train.py --epochs 100 \
                 --sample_output_folder /samples/ \
                 --net_name /dehaze_chromatic_
 ```
-
 ### 4. Testing
 
 To test dehazing on RESIDE:
