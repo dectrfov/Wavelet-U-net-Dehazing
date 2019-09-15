@@ -33,6 +33,7 @@ $ cd Wavelet-U-net-Dehazing
 We only use images in clear and haze folders
 All claar images are divided as training images (train_clear), testing images (train_hazy).
 The hazy images are placed to corresponding folders (val_clear and val_hazy).
+<p align="center"><img width="100%" src="samples/0491_0.95_0.08.jpg" /></p>
 
 ### 3. Training
 ```bash
