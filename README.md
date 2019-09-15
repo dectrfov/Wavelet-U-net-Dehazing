@@ -35,4 +35,33 @@ All claar images are divided as training images (train_clear), testing images (t
 The hazy images are placed to corresponding folders (val_clear and val_hazy).
 
 ### 3. Training
+```bash
+$ CUDA_VISIBLE_DEVICES=0 python train.py --epochs 100 \
+                --lr 1e-4 \
+                --use_gpu true \
+                --gpu 0 \
+                --ori_data_path /train_clear/ \
+                --haze_data_path /train_hazy \
+                --val_ori_data_path /val_clear/ \
+                --val_haze_data_path /val_hazy/ \
+                --num_workers 4 \
+                --batch_size 40 \
+                --val_batch_size 4 \
+                --print_gap 500 \
+                --model_dir /model/ \
+                --log_dir /model/ \
+                --sample_output_folder /samples/ \
+                --net_name /dehaze_chromatic_
+```
 
+### 4. Testing
+
+To test dehazing on RESIDE:
+
+```bash
+$ python demo.py  --sample_output_folder samples/ \
+                --use_gpu true \
+                --gpu 0 \
+                --model_dir model/ \
+                --ckpt dehaze_chromatic_100.pkl
+```
