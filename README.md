@@ -18,8 +18,8 @@ This repository shows implementation of [Wavelet U-net for image dehazing](https
 * [PyWt](https://pypi.org/project/PyWt/)
 
 <br/>
-## Usage
 
+## Usage
 ### 1. Cloning the repository
 ```bash
 $ git clone https://github.com/dectrfov/Wavelet-U-net-Dehazing.git
