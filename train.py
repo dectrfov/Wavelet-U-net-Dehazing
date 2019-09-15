@@ -14,7 +14,6 @@ from model import ACT
 from data import HazeDataset
 import torchvision.models as models
 import math
-import tqdm
 import numpy as np
 
 
@@ -39,13 +38,12 @@ def save_model(epoch, path, net, optimizer, net_name):
     if not os.path.exists(os.path.join(path, net_name)):
         os.mkdir(os.path.join(path, net_name))
     torch.save({'epoch': epoch, 'state_dict': net.state_dict(), 'optimizer': optimizer.state_dict()},
-               f=os.path.join(path, net_name, '{}_{}.pkl'.format('AoD_sub_dep', epoch)))
+               f=os.path.join(path, net_name, '{}_{}.pkl'.format('', epoch)))
 
 @logger
 def load_optimizer(net, cfg):
     optimizer = torch.optim.Adam(net.parameters(), lr=cfg.lr, weight_decay=cfg.weight_decay)
     return optimizer
-
 
 @logger
 def load_network(device):
@@ -78,7 +76,7 @@ def main(cfg):
     # -------------------------------------------------------------------
     # load network
     #network = load_network(device)
-    network=AODnet().to(device)
+    network=ACT().to(device)
     # -------------------------------------------------------------------
     # load optimizer
     optimizer = load_optimizer(network, cfg)
@@ -127,9 +125,6 @@ def main(cfg):
         save_model(epoch+1, cfg.model_dir, network, optimizer, cfg.net_name)
     # -------------------------------------------------------------------
     # train finish
-
-
-
 
 if __name__ == '__main__':
     config_args, unparsed_args = get_config()
