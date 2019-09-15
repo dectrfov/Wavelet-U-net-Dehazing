@@ -3,7 +3,7 @@ WAVELET U-NET AND THE CHROMATIC ADAPTATION TRANSFORM FOR SINGLE IMAGE DEHAZING -
 
 This repository shows implementation of [Wavelet U-net](https://ieeexplore.ieee.org/document/8803391). This work establishes the new network combining wavelet transrom for single image dehazing. We use [RESIDE](https://sites.google.com/view/reside-dehaze-datasets/reside-v0)dataset for evaluation, and it outperforms the state-of-art algorithms.
 
-<p align="center"><img width="100%" src="result_an.png" /></p>
+<p align="center"><img width="100%" src="figures/result_an.png" /></p>
 
 ## Paper
 [WAVELET U-NET AND THE CHROMATIC ADAPTATION TRANSFORM FOR SINGLE IMAGE DEHAZING](https://ieeexplore.ieee.org/document/8803391) <br/>
@@ -21,5 +21,18 @@ This repository shows implementation of [Wavelet U-net](https://ieeexplore.ieee.
 <br/>
 
 
+## Usage
 
+### 1. Cloning the repository
+```bash
+$ git clone https://github.com/dectrfov/Wavelet-U-net-Dehazing.git
+$ cd Wavelet-U-net-Dehazing
+```
+
+### 2. Downloading the [RESIDE](http://t.cn/RQXyZFI ) dataset
+We only use images in clear and haze folders
+All claar images are divided as training images (train_clear), testing images (train_hazy).
+The hazy images are placed to corresponding folders (val_clear and val_hazy).
+
+### 3. Training
 
