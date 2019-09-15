@@ -1,7 +1,7 @@
 # Wavelet-U-unt-Dehazing
 WAVELET U-NET AND THE CHROMATIC ADAPTATION TRANSFORM FOR SINGLE IMAGE DEHAZING - ICIP 2019
 
-This repository shows implementation of [Wavelet U-net](https://ieeexplore.ieee.org/document/8803391). This woek establish the new network combining wavelwt transrom for single image dehazing. We use [RESIDE](https://sites.google.com/view/reside-dehaze-datasets/reside-v0)dataset for evaluation, and it out outperforms the state-of-art algorithms.
+This repository shows implementation of [Wavelet U-net](https://ieeexplore.ieee.org/document/8803391). This work establishes the new network combining wavelet transrom for single image dehazing. We use [RESIDE](https://sites.google.com/view/reside-dehaze-datasets/reside-v0)dataset for evaluation, and it outperforms the state-of-art algorithms.
 
 <p align="center"><img width="100%" src="result_an.png" /></p>
 
@@ -12,3 +12,14 @@ This repository shows implementation of [Wavelet U-net](https://ieeexplore.ieee.
  IEEE International Conference on Image Processing ([ICIP](http://2019.ieeeicip.org/)), 2019 
 
 <br/>
+
+## Dependencies
+* [Python 3.6+](https://www.continuum.io/downloads)
+* [PyTorch 0.4.0+](http://pytorch.org/)
+* [PyWt](https://pypi.org/project/PyWt/)
+
+<br/>
+
+
+
+
