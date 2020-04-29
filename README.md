@@ -28,7 +28,7 @@ $ cd Wavelet-U-net-Dehazing
 
 ### 2. Downloading the [RESIDE](http://t.cn/RQXyZFI ) dataset
 We only use images in clear and haze folders
-All claar images are divided as training images (train_clear), testing images (train_hazy).
+All clear images are divided as training images (train_clear), testing images (train_hazy).
 The hazy images are placed to corresponding folders (val_clear and val_hazy).
 
 ### 3. Training
