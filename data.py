@@ -10,7 +10,7 @@ class HazeDataset(torch.utils.data.Dataset):
         self.haze_root = haze_root
         self.ori_root = ori_root
         self.image_name_list = glob.glob(os.path.join(self.haze_root, '*.bmp'))
-        self.image_name_list+=(glob.glob(os.path.join(self.haze_root, '*.jpg')))
+        self.image_name_list += (glob.glob(os.path.join(self.haze_root, '*.jpg')))
         self.matching_dict = {}
         self.file_list = []
         self.get_image_pair_list()
@@ -32,8 +32,9 @@ class HazeDataset(torch.utils.data.Dataset):
         
     def get_image_pair_list(self):
         for image in self.image_name_list:
-            image = image.split("/")[-1]
+            image = os.path.basename(image)
             key = image.split("_")[0] + ".jpg"
+
             if key in self.matching_dict.keys():
                 self.matching_dict[key].append(image)
             else:
